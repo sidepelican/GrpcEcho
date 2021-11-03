@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package echo;
+
+service Echo {
+    rpc Greeting(GreetingRequest) returns (GreetingResponse) {}
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+message GreetingRequest {
+}
+
+message GreetingResponse {
+    string message = 1;
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
